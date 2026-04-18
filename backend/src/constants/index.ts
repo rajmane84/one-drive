@@ -5,7 +5,7 @@ import type { CorsOptions } from "cors";
 export const baseCookieOptions: CookieOptions = {
   httpOnly: true,
   secure: env.NODE_ENV === "production",
-  sameSite: "none", 
+  sameSite: env.NODE_ENV === "production" ? "none" : "lax", 
 };
 
 export const corsOptions: CorsOptions = {
