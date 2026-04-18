@@ -45,7 +45,7 @@ export const sendOTP = async (email: string, otp: string) => {
     };
 
     const info = await devTransporter.sendMail(mailOptions);
-    console.log("Message sent: %s", info.messageId);
+    console.log("Message sent: %s", info);
   } catch (error) {
     console.error("Error sending email via Nodemailer:", error);
     throw new ApiError(500, "Failed to send verification email");

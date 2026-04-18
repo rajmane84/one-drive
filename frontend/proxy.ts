@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 import { jwtVerify } from "jose";
 import { authService } from "@/features/auth/services/auth.service";
 
-const PUBLIC_ROUTES = ["/auth/login", "/auth/register"];
+const PUBLIC_ROUTES = ["/auth/login", "/auth/register", "/auth/verify-otp"];
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
